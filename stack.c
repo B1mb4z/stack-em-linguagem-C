@@ -28,12 +28,7 @@ void EmptyStack(stackT *stack);
 void FreeStack(stackT *stack);
 int isEmpty(stackT *stack);
 
-// Implementação das funções
 
-/**
- * Cria um novo nó na memória heap
- * @return Ponteiro para o novo nó ou NULL em caso de erro
- */
 nodeT *NewNode(void) {
     nodeT *newNode = (nodeT *)malloc(sizeof(nodeT));
     if (newNode == NULL) {
@@ -44,10 +39,7 @@ nodeT *NewNode(void) {
     return newNode;
 }
 
-/**
- * Cria uma nova Stack vazia
- * @return Ponteiro para a nova Stack ou NULL em caso de erro
- */
+
 stackT *NewStack(void) {
     stackT *newStack = (stackT *)malloc(sizeof(stackT));
     if (newStack == NULL) {
@@ -58,11 +50,7 @@ stackT *NewStack(void) {
     return newStack;
 }
 
-/**
- * Adiciona um elemento no topo da Stack
- * @param stack Ponteiro para a Stack
- * @param processo Processo a ser adicionado
- */
+
 void Push(stackT *stack, valueT processo) {
     nodeT *newNode = NewNode();
     if (newNode == NULL) {
@@ -74,11 +62,6 @@ void Push(stackT *stack, valueT processo) {
     stack->head = newNode;
 }
 
-/**
- * Remove e retorna o elemento do topo da Stack
- * @param stack Ponteiro para a Stack
- * @return Processo removido ou estrutura vazia em caso de erro
- */
 valueT Pop(stackT *stack) {
     valueT emptyValue = {0, ""};
     
@@ -95,20 +78,13 @@ valueT Pop(stackT *stack) {
     return result;
 }
 
-/**
- * Esvazia a Stack (remove todos os elementos)
- * @param stack Ponteiro para a Stack
- */
 void EmptyStack(stackT *stack) {
     while (!isEmpty(stack)) {
         Pop(stack); // Remove todos os elementos
     }
 }
 
-/**
- * Liberta a memória da Stack (apenas se estiver vazia)
- * @param stack Ponteiro para a Stack
- */
+
 void FreeStack(stackT *stack) {
     if (!isEmpty(stack)) {
         fprintf(stderr, "Erro: Não é possível liberar a Stack pois não está vazia.\n");
@@ -118,18 +94,12 @@ void FreeStack(stackT *stack) {
     free(stack);
 }
 
-/**
- * Verifica se a Stack está vazia
- * @param stack Ponteiro para a Stack
- * @return 1 se vazia, 0 caso contrário
- */
+
 int isEmpty(stackT *stack) {
     return (stack->head == NULL);
 }
 
-/**
- * Função principal com exemplo de uso
- */
+
 int main() {
     // Criar uma nova Stack
     stackT *myStack = NewStack();
