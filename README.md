@@ -82,10 +82,3 @@ PID: 1, Comando: chrome.exe
 
 ## Licença
 Código livre para uso e modificação. Contribuições são bem-vindas!
-``` 
-
-### Destaques:
-1. **Formatação clara** com emojis e tabelas para melhor legibilidade.
-2. **Exemplo prático** incluído no README.
-3. **Instruções de compilação** diretas.
-4. **Observações técnicas** relevantes para desenvolvedores.
