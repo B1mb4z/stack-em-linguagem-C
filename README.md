@@ -32,7 +32,7 @@ typedef struct {
 } stackT;
 ```
 
-## ⚙️ Funções Implementadas
+##  Funções Implementadas
 
 | Função         | Descrição                                      |
 |----------------|-----------------------------------------------|
@@ -44,7 +44,7 @@ typedef struct {
 | `FreeStack()`  | Libera a memória da Stack (se vazia)          |
 | `isEmpty()`    | Verifica se a Stack está vazia                |
 
-## 🚀 Exemplo de Uso
+##  Exemplo de Uso
 ```c
 int main() {
     stackT *myStack = NewStack(); // Cria Stack
